@@ -1,0 +1,185 @@
+// Features section styles
+
+.features {
+  padding: $spacing-20 0;
+  background: $gradient-subtle;
+  
+  &__container {
+    @include container;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-16;
+  }
+  
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-2;
+    background: rgba($color-primary, 0.1);
+    border-radius: 9999px;
+    padding: $spacing-2 $spacing-4;
+    margin-bottom: $spacing-4;
+    
+    svg {
+      height: 1rem;
+      width: 1rem;
+      color: $color-primary;
+    }
+    
+    span {
+      font-size: $text-sm;
+      font-weight: 500;
+      color: $color-primary;
+    }
+  }
+  
+  &__title {
+    font-size: $text-4xl;
+    font-weight: 700;
+    margin-bottom: $spacing-6;
+    color: $color-foreground;
+    
+    @include tablet {
+      font-size: $text-5xl;
+    }
+  }
+  
+  &__title-highlight {
+    color: $color-primary;
+  }
+  
+  &__subtitle {
+    font-size: $text-xl;
+    color: $color-muted-foreground;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-8;
+    margin-bottom: $spacing-16;
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__card {
+    @include feature-card;
+    @include fade-up;
+    
+    &:nth-child(1) { animation-delay: 0s; }
+    &:nth-child(2) { animation-delay: 0.1s; }
+    &:nth-child(3) { animation-delay: 0.2s; }
+    &:nth-child(4) { animation-delay: 0.3s; }
+    &:nth-child(5) { animation-delay: 0.4s; }
+    &:nth-child(6) { animation-delay: 0.5s; }
+  }
+  
+  &__card-icon {
+    background: $gradient-hero;
+    padding: $spacing-3;
+    border-radius: $border-radius-lg;
+    width: fit-content;
+    margin-bottom: $spacing-4;
+    
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      color: $color-primary-foreground;
+    }
+  }
+  
+  &__card-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    margin-bottom: $spacing-3;
+  }
+  
+  &__card-title {
+    font-size: $text-xl;
+    font-weight: 600;
+    color: $color-card-foreground;
+  }
+  
+  &__card-highlight {
+    background: rgba($color-accent, 0.2);
+    color: $color-accent;
+    font-size: 0.75rem;
+    padding: 0.25rem $spacing-2;
+    border-radius: 9999px;
+    font-weight: 500;
+  }
+  
+  &__card-description {
+    color: $color-muted-foreground;
+    margin-bottom: $spacing-4;
+    line-height: 1.6;
+  }
+  
+  &__card-button {
+    @include button-ghost;
+    color: $color-primary;
+    padding: 0;
+    height: auto;
+    
+    &:hover {
+      color: $color-primary-foreground;
+      background: $color-primary;
+    }
+    
+    .arrow {
+      margin-left: $spacing-2;
+      transition: $transition-fast;
+    }
+    
+    &:hover .arrow {
+      transform: translateX(0.25rem);
+    }
+  }
+  
+  &__cta {
+    text-align: center;
+    
+    &-container {
+      background: $color-card;
+      border: 1px solid $color-border;
+      border-radius: $border-radius-xl;
+      padding: $spacing-8;
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+    
+    &-title {
+      font-size: $text-2xl;
+      font-weight: 700;
+      margin-bottom: $spacing-4;
+      color: $color-card-foreground;
+    }
+    
+    &-description {
+      color: $color-muted-foreground;
+      margin-bottom: $spacing-6;
+    }
+    
+    &-actions {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-4;
+      justify-content: center;
+      
+      @include mobile {
+        flex-direction: row;
+      }
+    }
+  }
+}

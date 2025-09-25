@@ -1,0 +1,177 @@
+// FarmFriend SCSS Mixins
+
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}
+
+// Button mixins
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: $border-radius-sm;
+  font-size: $text-sm;
+  font-weight: 500;
+  transition: $transition-fast;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px $color-ring;
+  }
+  
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background: $color-primary;
+  color: $color-primary-foreground;
+  
+  &:hover {
+    background: rgba($color-primary, 0.9);
+  }
+}
+
+@mixin button-hero {
+  @include button-base;
+  background: $gradient-hero;
+  color: $color-primary-foreground;
+  box-shadow: $shadow-soft;
+  
+  &:hover {
+    box-shadow: $shadow-elegant;
+    transform: scale(1.05);
+  }
+}
+
+@mixin button-ai {
+  @include button-base;
+  background: $gradient-accent;
+  color: $color-accent-foreground;
+  border: 1px solid rgba($color-accent, 0.2);
+  
+  &:hover {
+    box-shadow: $shadow-glow;
+    border-color: rgba($color-accent, 0.4);
+  }
+}
+
+@mixin button-outline {
+  @include button-base;
+  border: 1px solid $color-input;
+  background: $color-background;
+  color: $color-foreground;
+  
+  &:hover {
+    background: $color-accent;
+    color: $color-accent-foreground;
+  }
+}
+
+@mixin button-ghost {
+  @include button-base;
+  background: transparent;
+  color: $color-foreground;
+  
+  &:hover {
+    background: $color-accent;
+    color: $color-accent-foreground;
+  }
+}
+
+// Card mixins
+@mixin card-base {
+  background: $color-card;
+  color: $color-card-foreground;
+  border-radius: $border-radius;
+  border: 1px solid $color-border;
+}
+
+@mixin feature-card {
+  @include card-base;
+  padding: $spacing-6;
+  transition: $transition-smooth;
+  box-shadow: $shadow-soft;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $shadow-elegant;
+  }
+}
+
+// Animation mixins
+@mixin fade-up($delay: 0s) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease-out forwards;
+  animation-delay: $delay;
+}
+
+@mixin scale-in($delay: 0s) {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.4s ease-out forwards;
+  animation-delay: $delay;
+}
+
+@mixin slide-right($delay: 0s) {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideRight 0.6s ease-out forwards;
+  animation-delay: $delay;
+}
+
+// Utility mixins
+@mixin container {
+  max-width: $breakpoint-xl;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin text-gradient($from, $to) {
+  background: linear-gradient(135deg, $from, $to);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

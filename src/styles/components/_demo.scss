@@ -1,0 +1,324 @@
+// Interactive demo styles
+
+.demo {
+  padding: $spacing-20 0;
+  background: $color-background;
+  
+  &__container {
+    @include container;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-16;
+  }
+  
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-2;
+    background: rgba($color-accent, 0.1);
+    border-radius: 9999px;
+    padding: $spacing-2 $spacing-4;
+    margin-bottom: $spacing-4;
+    
+    svg {
+      height: 1rem;
+      width: 1rem;
+      color: $color-accent;
+    }
+    
+    span {
+      font-size: $text-sm;
+      font-weight: 500;
+      color: $color-accent-foreground;
+    }
+  }
+  
+  &__title {
+    font-size: $text-4xl;
+    font-weight: 700;
+    margin-bottom: $spacing-6;
+    color: $color-foreground;
+    
+    @include tablet {
+      font-size: $text-5xl;
+    }
+  }
+  
+  &__subtitle {
+    font-size: $text-xl;
+    color: $color-muted-foreground;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  
+  &__content {
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-12;
+    align-items: center;
+    
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &__steps {
+    h3 {
+      font-size: $text-2xl;
+      font-weight: 700;
+      color: $color-foreground;
+      margin-bottom: $spacing-6;
+    }
+  }
+  
+  &__step {
+    display: flex;
+    align-items: center;
+    gap: $spacing-4;
+    padding: $spacing-4;
+    border-radius: $border-radius-lg;
+    border: 1px solid $color-border;
+    transition: $transition-smooth;
+    margin-bottom: $spacing-6;
+    
+    &--active {
+      border-color: $color-primary;
+      background: rgba($color-primary, 0.05);
+    }
+    
+    &--completed {
+      border-color: $color-accent;
+      background: rgba($color-accent, 0.05);
+    }
+    
+    &--pending {
+      background: rgba($color-muted, 0.3);
+    }
+  }
+  
+  &__step-icon {
+    padding: $spacing-3;
+    border-radius: 9999px;
+    
+    &--active {
+      background: $gradient-hero;
+    }
+    
+    &--completed {
+      background: $gradient-accent;
+    }
+    
+    &--pending {
+      background: $color-muted;
+    }
+    
+    svg {
+      height: 1.25rem;
+      width: 1.25rem;
+      
+      &--active, &--completed {
+        color: $color-primary-foreground;
+      }
+      
+      &--pending {
+        color: $color-muted-foreground;
+      }
+    }
+  }
+  
+  &__step-content {
+    h4 {
+      font-weight: 600;
+      color: $color-foreground;
+    }
+    
+    p {
+      font-size: $text-sm;
+      color: $color-muted-foreground;
+    }
+  }
+  
+  &__step-spinner {
+    margin-left: auto;
+    
+    .spinner {
+      animation: spin 1s linear infinite;
+      height: 1.25rem;
+      width: 1.25rem;
+      border: 2px solid $color-primary;
+      border-top-color: transparent;
+      border-radius: 50%;
+    }
+  }
+  
+  &__interactive {
+    background: $color-card;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-xl;
+    padding: $spacing-6;
+  }
+  
+  &__upload-area {
+    border: 2px dashed $color-border;
+    border-radius: $border-radius-xl;
+    padding: $spacing-8;
+    text-align: center;
+    transition: $transition-smooth;
+    
+    &--active {
+      border-color: $color-primary;
+      background: rgba($color-primary, 0.05);
+    }
+  }
+  
+  &__upload-icon {
+    background: $gradient-hero;
+    padding: $spacing-4;
+    border-radius: 9999px;
+    width: fit-content;
+    margin: 0 auto $spacing-4;
+    
+    svg {
+      height: 2rem;
+      width: 2rem;
+      color: $color-primary-foreground;
+    }
+  }
+  
+  &__upload-title {
+    font-size: $text-lg;
+    font-weight: 600;
+    margin-bottom: $spacing-2;
+    color: $color-card-foreground;
+  }
+  
+  &__upload-description {
+    color: $color-muted-foreground;
+    margin-bottom: $spacing-4;
+  }
+  
+  &__upload-progress {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    justify-content: center;
+    
+    .progress-bar {
+      animation: pulse 1s infinite;
+      height: 0.5rem;
+      width: 5rem;
+      background: $color-primary;
+      border-radius: 9999px;
+    }
+    
+    span {
+      font-size: $text-sm;
+      color: $color-primary;
+      font-weight: 500;
+    }
+  }
+  
+  &__results {
+    h4 {
+      display: flex;
+      align-items: center;
+      gap: $spacing-3;
+      margin-bottom: $spacing-4;
+      font-size: $text-lg;
+      font-weight: 600;
+      color: $color-card-foreground;
+      
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: $color-accent;
+      }
+    }
+  }
+  
+  &__result-item {
+    padding: $spacing-4;
+    border-radius: $border-radius-lg;
+    border: 1px solid;
+    margin-bottom: $spacing-4;
+    
+    &--high {
+      border-color: rgba($color-destructive, 0.2);
+      background: rgba($color-destructive, 0.05);
+    }
+    
+    &--low {
+      border-color: rgba($color-accent, 0.2);
+      background: rgba($color-accent, 0.05);
+    }
+  }
+  
+  &__result-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacing-2;
+    
+    .disease-name {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      
+      svg {
+        height: 1rem;
+        width: 1rem;
+        
+        &--high {
+          color: $color-destructive;
+        }
+        
+        &--low {
+          color: $color-accent;
+        }
+      }
+      
+      span {
+        font-weight: 600;
+        color: $color-card-foreground;
+      }
+    }
+    
+    .confidence {
+      font-size: $text-sm;
+      font-weight: 500;
+      color: $color-muted-foreground;
+    }
+  }
+  
+  &__result-severity {
+    font-size: $text-sm;
+    color: $color-muted-foreground;
+    margin-bottom: $spacing-2;
+    
+    span {
+      font-weight: 500;
+    }
+  }
+  
+  &__result-treatment {
+    font-size: $text-sm;
+    color: $color-card-foreground;
+    
+    strong {
+      font-weight: 600;
+    }
+  }
+  
+  &__result-actions {
+    display: flex;
+    gap: $spacing-3;
+    margin-top: $spacing-4;
+  }
+}

@@ -1,0 +1,181 @@
+// Hero section styles
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  &__background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, 
+        rgba($color-primary, 0.8),
+        rgba($color-primary, 0.6),
+        transparent
+      );
+    }
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 10;
+    @include container;
+    padding: $spacing-20 $spacing-4;
+  }
+  
+  &__wrapper {
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: center;
+    color: $color-primary-foreground;
+  }
+  
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-2;
+    background: rgba($color-accent, 0.2);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba($color-accent, 0.3);
+    border-radius: 9999px;
+    padding: $spacing-2 $spacing-4;
+    margin-bottom: $spacing-6;
+    @include fade-up;
+    
+    svg {
+      height: 1rem;
+      width: 1rem;
+      color: $color-accent;
+    }
+    
+    span {
+      font-size: $text-sm;
+      font-weight: 500;
+      color: $color-accent-foreground;
+    }
+  }
+  
+  &__title {
+    font-size: $text-5xl;
+    font-weight: 700;
+    margin-bottom: $spacing-6;
+    @include fade-up;
+    animation-delay: 0.1s;
+    
+    @include tablet {
+      font-size: $text-7xl;
+    }
+  }
+  
+  &__title-gradient {
+    @include text-gradient($color-accent, $color-accent-glow);
+  }
+  
+  &__subtitle {
+    font-size: $text-xl;
+    margin-bottom: $spacing-8;
+    color: rgba($color-primary-foreground, 0.9);
+    @include fade-up;
+    animation-delay: 0.2s;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include tablet {
+      font-size: $text-2xl;
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    justify-content: center;
+    margin-bottom: $spacing-12;
+    @include fade-up;
+    animation-delay: 0.3s;
+    
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+  
+  &__stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-8;
+    max-width: 32rem;
+    margin: 0 auto;
+    @include fade-up;
+    animation-delay: 0.4s;
+    
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__stat {
+    text-align: center;
+    
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: $spacing-2;
+      
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: $color-accent;
+        margin-right: $spacing-2;
+      }
+      
+      span {
+        font-size: $text-2xl;
+        font-weight: 700;
+      }
+    }
+    
+    &-label {
+      font-size: $text-sm;
+      color: rgba($color-primary-foreground, 0.8);
+    }
+  }
+  
+  &__scroll-indicator {
+    position: absolute;
+    bottom: $spacing-8;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    
+    &-container {
+      width: 1.5rem;
+      height: 2.5rem;
+      border: 2px solid rgba($color-primary-foreground, 0.5);
+      border-radius: 9999px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    &-dot {
+      width: 0.25rem;
+      height: 0.75rem;
+      background: $color-accent;
+      border-radius: 9999px;
+      margin-top: $spacing-2;
+      animation: pulse 2s infinite;
+    }
+  }
+}

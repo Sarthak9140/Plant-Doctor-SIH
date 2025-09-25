@@ -1,0 +1,93 @@
+// FarmFriend SCSS Variables - Agricultural Technology Theme
+
+// Core agricultural green palette
+$color-background: hsl(120, 20%, 98%);
+$color-foreground: hsl(120, 15%, 15%);
+
+// Card system with nature-inspired tones
+$color-card: hsl(0, 0%, 100%);
+$color-card-foreground: hsl(120, 15%, 15%);
+
+$color-popover: hsl(0, 0%, 100%);
+$color-popover-foreground: hsl(120, 15%, 15%);
+
+// Primary: Deep agricultural green
+$color-primary: hsl(135, 60%, 25%);
+$color-primary-foreground: hsl(0, 0%, 98%);
+$color-primary-glow: hsl(135, 70%, 45%);
+
+// Secondary: Fresh crop green
+$color-secondary: hsl(120, 40%, 92%);
+$color-secondary-foreground: hsl(135, 60%, 25%);
+
+// Muted tones for backgrounds
+$color-muted: hsl(115, 20%, 95%);
+$color-muted-foreground: hsl(120, 10%, 45%);
+
+// Accent: Golden harvest
+$color-accent: hsl(45, 90%, 60%);
+$color-accent-foreground: hsl(120, 15%, 15%);
+$color-accent-glow: hsl(45, 100%, 70%);
+
+// Destructive remains standard
+$color-destructive: hsl(0, 84%, 60%);
+$color-destructive-foreground: hsl(0, 0%, 98%);
+
+// Borders and inputs with subtle green tint
+$color-border: hsl(120, 15%, 88%);
+$color-input: hsl(120, 15%, 92%);
+$color-ring: hsl(135, 60%, 25%);
+
+// Enhanced radius for modern feel
+$border-radius: 0.75rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 1.5rem;
+
+// Custom gradients for FarmFriend
+$gradient-hero: linear-gradient(135deg, $color-primary, $color-primary-glow);
+$gradient-accent: linear-gradient(135deg, $color-accent, $color-accent-glow);
+$gradient-subtle: linear-gradient(180deg, $color-background, $color-muted);
+
+// Shadows with agricultural theme
+$shadow-elegant: 0 10px 40px -10px rgba($color-primary, 0.15);
+$shadow-glow: 0 0 50px rgba($color-accent, 0.3);
+$shadow-soft: 0 4px 20px -8px rgba($color-primary, 0.1);
+
+// Smooth transitions
+$transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Spacing
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-5: 1.25rem;
+$spacing-6: 1.5rem;
+$spacing-8: 2rem;
+$spacing-10: 2.5rem;
+$spacing-12: 3rem;
+$spacing-16: 4rem;
+$spacing-20: 5rem;
+$spacing-24: 6rem;
+$spacing-32: 8rem;
+
+// Font sizes
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 2.25rem;
+$text-5xl: 3rem;
+$text-6xl: 3.75rem;
+$text-7xl: 4.5rem;

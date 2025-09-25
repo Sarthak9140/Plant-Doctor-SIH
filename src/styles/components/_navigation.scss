@@ -1,0 +1,135 @@
+// Navigation component styles
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba($color-background, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $color-border;
+  
+  &__container {
+    @include container;
+  }
+  
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+  }
+  
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    
+    &-icon {
+      background: $gradient-hero;
+      padding: $spacing-2;
+      border-radius: $border-radius-lg;
+      
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: $color-primary-foreground;
+      }
+    }
+    
+    &-text {
+      font-size: $text-xl;
+      font-weight: 700;
+      color: $color-foreground;
+    }
+  }
+  
+  &__nav {
+    display: none;
+    
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: $spacing-8;
+    }
+    
+    a {
+      color: $color-foreground;
+      text-decoration: none;
+      transition: $transition-fast;
+      
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  
+  &__actions {
+    display: none;
+    
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: $spacing-4;
+    }
+  }
+  
+  &__mobile-toggle {
+    display: block;
+    padding: $spacing-2;
+    border-radius: $border-radius-sm;
+    background: transparent;
+    border: none;
+    color: $color-foreground;
+    cursor: pointer;
+    transition: $transition-fast;
+    
+    @include tablet {
+      display: none;
+    }
+    
+    &:hover {
+      background: $color-muted;
+    }
+    
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  
+  &__mobile-menu {
+    @include tablet {
+      display: none;
+    }
+    
+    padding: $spacing-4 0;
+    border-top: 1px solid $color-border;
+    @include fade-up;
+    
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-4;
+    }
+    
+    a {
+      color: $color-foreground;
+      text-decoration: none;
+      padding: $spacing-2 0;
+      transition: $transition-fast;
+      
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    
+    &-actions {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-2;
+      padding-top: $spacing-4;
+    }
+  }
+}
