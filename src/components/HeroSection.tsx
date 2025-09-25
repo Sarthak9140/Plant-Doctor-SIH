@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Shield, Users } from "lucide-react";
+import { ArrowRight, Sparkles, TrendingUp, Users } from "lucide-react";
 import heroImage from "@/assets/farm-hero.jpg";
 
 const HeroSection = () => {
@@ -53,10 +53,10 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
-                <Shield className="h-6 w-6 text-accent mr-2" />
-                <span className="text-2xl font-bold">99.2%</span>
+                <TrendingUp className="h-6 w-6 text-accent mr-2" />
+                <span className="text-2xl font-bold">35%</span>
               </div>
-              <p className="text-sm text-primary-foreground/80">Detection Accuracy</p>
+              <p className="text-sm text-primary-foreground/80">Yield Improvement</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
