@@ -1,0 +1,126 @@
+.about-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #f4fef6, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1300px;
+    margin: auto;
+    flex-wrap: wrap;
+    animation: fadeSlideUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .about-text {
+    flex: 1 1 600px;
+
+    h2 {
+      font-size: 2.8rem;
+      color: #1b8e3e;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+
+      span {
+        color: #166c2e;
+      }
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+
+      .highlight {
+        background: #e8f5e9;
+        border-left: 4px solid #1b8e3e;
+        padding: 1rem 1.25rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
+
+        h4 {
+          font-size: 1.1rem;
+          margin-bottom: 0.5rem;
+          color: #1b8e3e;
+        }
+
+        p {
+          margin: 0;
+          color: #333;
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  .about-image {
+    flex: 1 1 500px;
+    max-width: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Animation
+@keyframes fadeSlideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    .about-highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.all-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  padding-top: 8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+
+  > * {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+/* Hover effect for cards */
+.all-products > *:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .all-products {
+    gap: 1.25rem;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-products {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .all-products {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.75rem;
+    padding-top: 1.5rem;
+  }
+}

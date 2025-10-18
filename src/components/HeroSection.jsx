@@ -5,9 +5,9 @@ const HeroSection = () => {
   return (
     <section className="hero">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="hero__background"
-        style={{ 
+        style={{
           backgroundImage: `url(${heroImage})`,
         }}
       ></div>
@@ -24,28 +24,35 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="hero__title">
             Protect Your Crops with{" "}
-            <span className="hero__title-gradient">
-              Smart AI
-            </span>
+            <span className="hero__title-gradient">Smart AI</span>
           </h1>
 
           {/* Subheadline */}
           <p className="hero__subtitle">
-            Upload a photo, get instant disease detection, and receive expert advice to save your harvest. 
-            Join thousands of farmers already protecting their crops with FarmFriend.
+            Upload a photo, get instant disease detection, and receive expert
+            advice to save your harvest. Join thousands of farmers already
+            protecting their crops with FarmFriend.
           </p>
 
           {/* CTA Buttons */}
           <div className="hero__actions">
-            <button className="btn btn--ai btn--xl">
+            <button
+              className="btn btn--ai btn--xl"
+              onClick={() => {
+                window.location.href = "/chat";
+              }}
+            >
               Try AI Detection Now
               <ArrowRight size={20} />
             </button>
-            <button className="btn btn--outline btn--xl" style={{
-              background: 'rgba(255, 255, 255, 0.1)',
-              borderColor: 'rgba(255, 255, 255, 0.2)',
-              color: 'white'
-            }}>
+            <button
+              className="btn btn--outline btn--xl"
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                borderColor: "rgba(255, 255, 255, 0.2)",
+                color: "white",
+              }}
+            >
               Watch Demo
             </button>
           </div>

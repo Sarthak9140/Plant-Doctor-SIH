@@ -1,0 +1,152 @@
+.product-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 8rem auto 2rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+      filter: brightness(1.05);
+    }
+  }
+
+  .detail-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    h2 {
+      font-size: clamp(1.4rem, 2vw, 1.8rem);
+      font-weight: 700;
+      color: #2d3748;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #276749;
+      }
+    }
+
+    .short {
+      font-size: 1rem;
+      color: #4a5568;
+    }
+
+    .desc {
+      font-size: 0.95rem;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #2f855a;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #276749;
+      }
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: 0.7rem 1.4rem;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+        &:first-child {
+          background: #2f855a;
+          color: white;
+
+          &:hover {
+            background: #276749;
+            transform: translateY(-2px);
+          }
+        }
+
+        &:last-child {
+          background: #edf2f7;
+          color: #2d3748;
+
+          &:hover {
+            background: #e2e8f0;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+
+    .note {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #718096;
+      background: #f7fafc;
+      padding: 0.85rem 1.2rem;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #edf2f7;
+      }
+    }
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    padding: 1.5rem;
+
+    img {
+      width: 100%;
+      height: 260px;
+    }
+
+    .detail-info {
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .price {
+        font-size: 1.05rem;
+      }
+
+      .actions {
+        flex-direction: column;
+
+        button {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+🌱 Plant Doctor — Smart India Hackathon Project
 
-## Project info
+Plant Doctor is an AI-powered plant health analysis platform designed to help farmers and gardeners quickly identify plant diseases, suggest treatments, and provide real-time agricultural insights.
+Built with React, TypeScript, and Tailwind CSS, the project combines modern UI design with powerful machine learning and AI chatbot integration for an interactive and intelligent user experience.
 
-**URL**: https://lovable.dev/projects/c37bc25b-2135-469d-a2f8-18e7daee83d4
+🔧 Tech Stack
 
-## How can I edit this code?
+⚡ Vite — Fast frontend build tool
 
-There are several ways of editing your application.
+⚛️ React (TypeScript) — Scalable component-based architecture
 
-**Use Lovable**
+🎨 Tailwind CSS — Utility-first styling
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c37bc25b-2135-469d-a2f8-18e7daee83d4) and start prompting.
+🧩 shadcn/ui — Accessible and elegant UI components
 
-Changes made via Lovable will be committed automatically to this repo.
+🤖 AI Chatbot — Provides instant support and guidance
 
-**Use your preferred IDE**
+✨ Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🌾 AI Disease Detection — Upload a leaf image to detect diseases instantly
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+💬 AI Chatbot — Answers questions, recommends fertilizers, and guides farmers
 
-Follow these steps:
+📸 Camera / Upload Support — Take a live photo or upload existing images
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🧠 ML-Powered Diagnosis — Uses trained models to predict plant health
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+📊 Plant Health Dashboard — View reports, treatment history, and recommendations
 
-# Step 3: Install the necessary dependencies.
-npm i
+🪴 Responsive UI — Works seamlessly across desktop and mobile
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🌍 Multi-Language Support (optional)
 
-**Edit a file directly in GitHub**
+🧭 Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Clone the repository
+   git clone https://github.com/Sarthak9140/Plant-Doctor-SIH.git
+   cd Plant-Doctor
 
-**Use GitHub Codespaces**
+2. Install dependencies
+   npm install
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. Run the development server
+   npm run dev
 
-## What technologies are used for this project?
+Then visit http://localhost:5173
+in your browser.
 
-This project is built with:
+🧱 Build for Production
+npm run build
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🚀 Deployment
 
-## How can I deploy this project?
+You can deploy this app to:
 
-Simply open [Lovable](https://lovable.dev/projects/c37bc25b-2135-469d-a2f8-18e7daee83d4) and click on Share -> Publish.
+Vercel
 
-## Can I connect a custom domain to my Lovable project?
+Netlify
 
-Yes, you can!
+GitHub Pages
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+or any cloud platform supporting static hosting.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🧠 AI Chatbot Integration
+
+The built-in Plant Doctor Chatbot provides:
+
+🌿 Step-by-step treatment suggestions
+
+📋 Nutrient and watering recommendations
+
+🧩 Connection to external APIs for regional crop data
+
+🗣️ Natural language interaction for an engaging experience
+
+You can integrate your own LLM API key (like OpenAI, Gemini, or Hugging Face) in the chatbot configuration.
+
+🧩 Future Enhancements
+
+🌤️ Integration with real-time weather and soil APIs
+
+📈 Farmer shopping place
+
+📈 Crop yield analytics dashboard

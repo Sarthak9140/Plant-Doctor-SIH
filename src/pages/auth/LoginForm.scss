@@ -1,0 +1,42 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+
+    &:focus {
+      border-color: #1b8e3e;
+      outline: none;
+    }
+  }
+
+  button {
+    padding: 12px;
+    background-color: #1b8e3e;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #166c2e;
+    }
+  }
+
+  .toggle-link {
+    text-align: center;
+    font-size: 14px;
+
+    span {
+      color: #1b8e3e;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
